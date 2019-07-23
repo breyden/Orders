@@ -27,7 +27,7 @@ for child in root:
         unprocessed_ordersBook2.append(child)
     elif (bookID=="book-3"):
         unprocessed_ordersBook3.append(child)
-print("--- %s seconds ---" % (time.time() - start_time))
+print("--- %s seconds for passing the xml data ---" % (time.time() - start_time))
 
 class myThread (threading.Thread):
    def __init__(self, BookID, unprocessed_ordersBook):
