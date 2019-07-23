@@ -8,7 +8,7 @@ from order import Order
 from Side import Side
 import queue
 import threading
-import time
+
 
 start_time = time.time()
 tree = ET.parse('orders.xml') # Use The ElementTree XML API module  API for parsing XML data.
@@ -27,8 +27,7 @@ for child in root:
         unprocessed_ordersBook2.append(child)
     elif (bookID=="book-3"):
         unprocessed_ordersBook3.append(child)
-
-print("---Time for parsing the XML data. ---" % (time.time() - start_time))
+print("--- %s seconds ---" % (time.time() - start_time))
 
 class myThread (threading.Thread):
    def __init__(self, BookID, unprocessed_ordersBook):
